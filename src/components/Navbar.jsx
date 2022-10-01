@@ -39,6 +39,7 @@ const Navbar = () => {
             <span>機場計程車</span>
           </div>
         </div>
+        <hr className="hr" size="2" width="1024" color="orange" />
       </div>
     </div>
   );
