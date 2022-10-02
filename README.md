@@ -1,3 +1,1 @@
-### 新增 SearchBar
-
-### 修改 Navbar
+### 完成 SearchBar 彈出選擇視窗
