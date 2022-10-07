@@ -1,8 +1,9 @@
 import React from 'react';
 import '../styles/feature.scss';
+import { CategoriesType, CategoriesCities } from '../data.js';
 import Categories from './Categories';
 import PostCards from './PostCards';
-import { CategoriesType, CategoriesCities } from '../data.js';
+import PopularHotels from './PopularHotels';
 
 const Feature = () => {
   return (
@@ -23,6 +24,12 @@ const Feature = () => {
         </div>
         <div className="listItems">
           <Categories data={CategoriesCities} />
+        </div>
+        <div className="listTitle">
+          <h1>人氣民宿、公寓類型住宿</h1>
+        </div>
+        <div className="listItems">
+          <PopularHotels />
         </div>
       </div>
     </div>

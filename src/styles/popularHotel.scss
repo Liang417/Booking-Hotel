@@ -1,0 +1,39 @@
+.popularHotels {
+  display: flex;
+  gap: 10px;
+  .item {
+    img {
+      width: 300px;
+      height: 280px;
+    }
+    .place {
+      font-size: 12px;
+      color: rgb(149, 147, 147);
+    }
+    .price {
+      padding: 2px 0px;
+      font-weight: 600;
+    }
+    .rate {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      button {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        background-color: var(--primary-color);
+      }
+      p {
+        font-size: 12px;
+        color: gray;
+      }
+    }
+  }
+}

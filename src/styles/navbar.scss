@@ -65,13 +65,17 @@
         }
       }
     }
+    hr {
+      width: 100%;
+      max-width: 1024px;
+      position: absolute;
+      top: 135px;
+      border: 1px solid orange;
+      background-color: orange;
+    }
   }
 }
 .active {
   border: white 1px solid;
   background-color: rgba(255, 255, 255, 0.14);
-}
-.hr {
-  position: absolute;
-  top: 135px;
 }

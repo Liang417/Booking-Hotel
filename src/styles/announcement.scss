@@ -11,7 +11,7 @@
       display: flex;
       align-items: center;
       width: 100%;
-      margin-top:10px;
+      margin-top: 10px;
       height: 80px;
       input {
         height: 20px;
@@ -68,6 +68,44 @@
           &:hover {
             background-color: rgba(53, 164, 127, 0.75);
           }
+        }
+      }
+    }
+    .globalBanner {
+      display: flex;
+      align-items: center;
+      height: 200px;
+      border: 1px solid lightgray;
+      border-radius: 5px;
+      margin-top: 20px;
+      padding: 5px 20px;
+      background-image: url('https://cf.bstatic.com/static/img/genius-banner-world-bg/2b5cdbad7b92073bc396b8b59d0bb421b3a01cba.png');
+      background-repeat: no-repeat;
+      background-position: right;
+      img {
+        width: 200px;
+      }
+      .globalInfo {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .bannerBtn {
+        display: flex;
+        gap: 10px;
+        button {
+          padding: 10px 15px;
+          border-radius: 2px;
+          border: 1px solid var(--primary-color);
+          background-color: white;
+          color: var(--primary-color);
+          cursor: pointer;
+          &:hover {
+            background-color: rgba(53, 164, 127, 0.1);
+          }
+        }
+        button:last-child {
+          border: none;
         }
       }
     }
