@@ -2,14 +2,16 @@ import React from 'react';
 import '../styles/navbar.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBed, faCar, faPlane, faTaxi, faToriiGate } from '@fortawesome/free-solid-svg-icons';
-
+import { Link } from 'react-router-dom';
 const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbarContainer">
         <div className="lineOne">
           <div className="left">
-            <span className="logo">Lewis.Booking</span>
+            <Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>
+              <span className="logo">Lewis.Booking</span>
+            </Link>
           </div>
           <div className="right">
             <button className="navButtonFlag" />

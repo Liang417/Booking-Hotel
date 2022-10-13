@@ -1,0 +1,135 @@
+.listContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  .listWrapper {
+    width: 100%;
+    max-width: 1024px;
+    gap: 20px;
+    display: flex;
+    .searchBar {
+      background-color: #ffc489;
+      padding: 5px;
+      border-radius: 5px;
+      height: max-content; //根據內容調整高度
+      position: sticky; //固定
+      top: 10px;
+      .searchTitle {
+        font-size: 22px;
+        background-color: rgb(249, 141, 48);
+        padding: 10px;
+        border-radius: 2px;
+        font-weight: 500;
+      }
+      .listItem {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        width: 250px;
+        font-size: 12px;
+        .searchInput {
+          padding: 10px 5px;
+          border-radius: 3px;
+          border: none;
+        }
+        .listItemLimitPrice {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 10px;
+          input {
+            border: 1px solid gray;
+          }
+        }
+        .listItemConditions {
+          background-color: white;
+          margin-top: 10px;
+          padding: 10px 5px;
+          // display: flex;
+          border-radius: 2px;
+        }
+        .searchBtn {
+          padding: 10px;
+          background-color: var(--primary-color);
+          border-radius: 2px;
+          border: none;
+          font-size: 20px;
+          color: white;
+          cursor: pointer;
+          &:hover {
+            background-color: rgb(15, 130, 92);
+          }
+        }
+        .dates {
+          background-color: #fff;
+          border: none;
+          border-radius: 2px;
+        }
+      }
+    }
+  }
+}
+.listResult {
+  width: 720px;
+  min-height: 500px;
+  .resultTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    .map {
+      padding: 20px 25px;
+      border-radius: 3px;
+      background-color: yellow;
+      background-image: url('https://cf.bstatic.com/psb/capla/static/media/map-entry-point.6b01012a.png');
+      button {
+        background-color: var(--primary-color);
+        border: none;
+        border-radius: 3px;
+        padding: 8px 15px;
+        color: white;
+      }
+    }
+  }
+}
+.conditionContainer {
+  position: absolute;
+  top: 395px;
+  right: 0px;
+  width: 200px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px lightgray;
+  padding: 10px 40px;
+  cursor: default;
+  .condition {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0px;
+    p {
+      font-size: 10px;
+      color: gray;
+    }
+    .conditionCounter {
+      display: flex;
+      width: 90px;
+      justify-content: space-between;
+      align-items: center;
+      .countBtn {
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+        color: var(--primary-color);
+        background-color: white;
+        border: 1px solid var(--primary-color);
+        cursor: pointer;
+        &:hover {
+          background-color: rgba(53, 164, 127, 0.1);
+        }
+        &:disabled {
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}
