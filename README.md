@@ -1,8 +1,3 @@
 ### 本次新增 or 修改
 
-新增 Hotel/Login/Register UI
-
-   <hr>
-   前端 UI 終於暫時告一段落 🥲 <br>
-   雖然是看著人家的範例照著做 <br>
-   但為了搞懂也花了不少時間 😵‍💫😵‍💫😵‍💫<br>
+新增 backend 並連接到 mongoDB，前後端分離，準備建立 database 開 Api，終於開始後端拉 💪
