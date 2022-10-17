@@ -5,7 +5,7 @@ const Categories = ({ data }) => {
   return (
     <>
       {data.map((item, index) => (
-        <div className="item" id={index}>
+        <div className="item" id={index} key={index}>
           <img src={item.img} alt="" />
           <div className="itemInfo">
             <div className="title">{item.name}</div>

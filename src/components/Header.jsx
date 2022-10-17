@@ -14,7 +14,6 @@ const Header = () => {
   const [openCalendar, setOpenCalendar] = useState(false);
   const [openCondition, setOpenCondition] = useState(false);
   const [destination, setDestination] = useState('');
-
   const [dates, setDates] = useState([
     {
       startDate: new Date(),
