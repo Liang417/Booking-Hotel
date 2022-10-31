@@ -5,6 +5,8 @@ import hotelRouter from './routes/hotelRoute.js';
 import roomRouter from './routes/roomRoute.js';
 import authRouter from './routes/authRoute.js';
 import userRouter from './routes/userRoute.js';
+import cookieParser from 'cookie-parser';
+
 const port = 5000;
 const app = express();
 
@@ -19,6 +21,7 @@ mongoose
   });
 
 app.use(express.json());
+app.use(cookieParser());
 app.use('/api/hotels', hotelRouter);
 app.use('/api/rooms', roomRouter);
 app.use('/api/auth', authRouter);

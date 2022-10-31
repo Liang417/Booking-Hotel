@@ -6,17 +6,18 @@ import {
   updateUserEmail,
   updateUserPassword,
 } from '../controller/userController.js';
+import { verifyAdmin, verifyUser } from '../utils.js';
 const userRouter = express.Router();
 
 //取得特定用戶資料
-userRouter.get('/:id', getUser);
+userRouter.get('/:id', verifyUser, getUser);
 //取得所有用戶資料
-userRouter.get('/', getAllUsers);
+userRouter.get('/', verifyAdmin, getAllUsers);
 //修改用戶信箱
-userRouter.put('/:id/edit/email', updateUserEmail);
+userRouter.put('/:id/edit/email', verifyUser, updateUserEmail);
 //修改用戶密碼
-userRouter.put('/:id/edit/password', updateUserPassword);
+userRouter.put('/:id/edit/password', verifyUser, updateUserPassword);
 //刪除用戶
-userRouter.delete('/:id', deleteUser);
+userRouter.delete('/:id', verifyUser, deleteUser);
 
 export default userRouter;

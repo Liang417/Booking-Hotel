@@ -40,7 +40,6 @@ export const updateUserEmail = async (req, res, next) => {
       else res.status(200).send('email變更成功');
     });
   } catch (err) {
-    console.log(err.name);
     next(errorMessage(500, '出現錯誤,請檢查id是否正確', err));
   }
 };

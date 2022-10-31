@@ -1,6 +1,7 @@
 import User from '../models/userModel.js';
 import bcrypt from 'bcryptjs';
 import { errorMessage } from '../errorMessage.js';
+import jwt from 'jsonwebtoken';
 
 //註冊
 export const register = async (req, res, next) => {
@@ -26,7 +27,8 @@ export const login = async (req, res, next) => {
     if (!comparePassword) {
       return next(errorMessage(404, 'email或password錯誤'));
     }
-    res.status(200).send('登入成功');
+    const token = jwt.sign({ id: user._id, isAdmin: user.isAdmin }, process.env.JWT);
+    res.cookie('JWT_token', token, { httpOnly: true }).status(200).send(`${user.username}登入成功`);
   } catch (err) {
     next(errorMessage(500, '登入失敗', err));
   }

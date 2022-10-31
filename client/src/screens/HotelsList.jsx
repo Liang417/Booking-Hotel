@@ -9,7 +9,6 @@ import { useLocation } from 'react-router-dom';
 
 const HotelsList = () => {
   const location = useLocation();
-  console.log(location);
   const [openCalendar, setOpenCalendar] = useState(false);
   const [openCondition, setOpenCondition] = useState(false);
   const [dates, setDates] = useState(location.state?.dates);
@@ -72,64 +71,61 @@ const HotelsList = () => {
                 <span className="SearchText" onClick={() => setOpenCondition(!openCondition)}>
                   {conditions.adult} 位成人 · {conditions.children} 位小孩 · {conditions.room} 間房
                 </span>
-                  {openCondition && (
-                    <div className="conditionContainer">
-                      <div className="condition">
-                        成人
-                        <div className="conditionCounter">
-                          <button
-                            className="countBtn"
-                            onClick={() => countHandler('adult', '-')}
-                            disabled={conditions.adult <= 1}
-                          >
-                            -
-                          </button>
-                          <span className="count">{conditions.adult}</span>
-                          <button className="countBtn" onClick={() => countHandler('adult', '+')}>
-                            +
-                          </button>
-                        </div>
-                      </div>
-                      <div className="condition">
-                        <span>
-                          小孩
-                          <p>0-17歲</p>
-                        </span>
-                        <div className="conditionCounter">
-                          <button
-                            className="countBtn"
-                            onClick={() => countHandler('children', '-')}
-                            disabled={conditions.children <= 0}
-                          >
-                            -
-                          </button>
-                          <span className="count">{conditions.children}</span>
-                          <button
-                            className="countBtn"
-                            onClick={() => countHandler('children', '+')}
-                          >
-                            +
-                          </button>
-                        </div>
-                      </div>
-                      <div className="condition">
-                        房間
-                        <div className="conditionCounter">
-                          <button
-                            className="countBtn"
-                            onClick={() => countHandler('room', '-')}
-                            disabled={conditions.room <= 1}
-                          >
-                            -
-                          </button>
-                          <span className="count">{conditions.room}</span>
-                          <button className="countBtn" onClick={() => countHandler('room', '+')}>
-                            +
-                          </button>
-                        </div>
+                {openCondition && (
+                  <div className="conditionContainer">
+                    <div className="condition">
+                      成人
+                      <div className="conditionCounter">
+                        <button
+                          className="countBtn"
+                          onClick={() => countHandler('adult', '-')}
+                          disabled={conditions.adult <= 1}
+                        >
+                          -
+                        </button>
+                        <span className="count">{conditions.adult}</span>
+                        <button className="countBtn" onClick={() => countHandler('adult', '+')}>
+                          +
+                        </button>
                       </div>
                     </div>
-                  )}
+                    <div className="condition">
+                      <span>
+                        小孩
+                        <p>0-17歲</p>
+                      </span>
+                      <div className="conditionCounter">
+                        <button
+                          className="countBtn"
+                          onClick={() => countHandler('children', '-')}
+                          disabled={conditions.children <= 0}
+                        >
+                          -
+                        </button>
+                        <span className="count">{conditions.children}</span>
+                        <button className="countBtn" onClick={() => countHandler('children', '+')}>
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <div className="condition">
+                      房間
+                      <div className="conditionCounter">
+                        <button
+                          className="countBtn"
+                          onClick={() => countHandler('room', '-')}
+                          disabled={conditions.room <= 1}
+                        >
+                          -
+                        </button>
+                        <span className="count">{conditions.room}</span>
+                        <button className="countBtn" onClick={() => countHandler('room', '+')}>
+                          +
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
             <div className="listItem">

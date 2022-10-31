@@ -1,13 +1,10 @@
 ### 本次新增 or 修改
-建立DB並透過不同的router呼叫對應的api進行CRUD操作  
+
+實作 JWT,將各 router 添加驗證身分的 middleware
+
 ### 隨手紀錄
-這次花了比較久的時間完成😭  
-有比較多小細節按照自己的想法稍微修改  
-為了嘗試自己開額外的api,花了大量的時間在閱讀documentation  
-這是目前讀的最認真的documentation...就獻給mongoDB了  
-以前都沒耐心仔細讀😂因為內容太龐大  
-這次來來回回至少看了15個小時...收穫蠻大的  
-感覺到一直有Aha-moment的出現  
-是個不錯的經驗,比較習慣讀doc了  
-似乎還有很多地方可以優化  
-不過還是先繼續前進好了  有點卡在這邊太久了!
+
+按照作者文章內容實作過程中發現了 bug：verifyUser/verifyAdmin 這兩個 middleware 未如預期執行  
+我在文章底下提出我發現的問題及解決方法  
+是個不錯的抓蟲練習,加深對 next 傳遞的理解   
+https://ithelp.ithome.com.tw/articles/10302719
